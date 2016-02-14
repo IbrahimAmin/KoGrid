@@ -435,3 +435,12 @@ input {
     right: -10px;
     top: -2px;
 }
+
+.kgAggPanel {
+    height: 30px;
+    padding: 5px;
+    border-top: 1px solid #d4d4d4;
+    font-family: robotoregular !important;
+    background-color: orangered;
+    color: #FFFFFF;
+}
