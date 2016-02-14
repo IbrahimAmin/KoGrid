@@ -98,6 +98,11 @@ window.kg.Grid = function (options) {
     self.setRenderedRows = function (newRows) {
         self.renderedRows(newRows);
         self.refreshDomSizes();
+        newRows.forEach(function(item) {
+            self.aggregateRows().forEach(function(agg, aggIndex) {
+                self.aggregateRows()[aggIndex].data(agg.data() + item.entity[agg.field]);
+            });
+        });
     };
     self.minRowsToRender = function () {
         var viewportH = self.viewportDimHeight() || 1;
