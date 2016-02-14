@@ -25,6 +25,7 @@
             }
             //set the right styling on the container
             elem.addClass("koGrid").addClass(grid.gridId.toString());
+            if (options.aggregateRows && options.aggregateRows().length) elem.addClass("hasAggregates");
             elem.append(gridElem);
             grid.$userViewModel = bindingContext.$data;
             ko.applyBindings(grid, gridElem[0]);
