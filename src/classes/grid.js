@@ -360,6 +360,7 @@ window.kg.Grid = function (options) {
     self.columns.subscribe(function(newCols) {
         self.config.columnsChanged(newCols);
     });
+    self.aggregateRows = options.aggregateRows || ko.observableArray([]);
     self.renderedRows = ko.observableArray([]);
     self.headerRow = null;
     self.rowHeight = self.config.rowHeight;
