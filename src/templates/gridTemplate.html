@@ -47,6 +47,11 @@
             </div>
         </div>
     </div>
+    <div class="kgAggPanel" data-bind="visible: aggregateRows().length, foreach: aggregateRows">
+    	<span data-bind="text: label"></span>: 
+    	<span data-bind="text: data"></span>
+    	<span data-bind="visible: (($parent.aggregateRows().length-1) !== $index())"> | </span>
+    </div>
     <div class="kgFooterPanel" data-bind="css: {'ui-widget-content': jqueryUITheme, 'ui-corner-bottom': jqueryUITheme}, style: footerStyle">
         <div class="kgTotalSelectContainer" data-bind="visible: footerVisible">
             <div class="kgFooterTotalItems" data-bind="css: {'kgNoMultiSelect': !multiSelect}" >
